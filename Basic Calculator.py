@@ -32,16 +32,20 @@ def divide(number1, number2):
 def root(number1):
     return (math.sqrt(number1))
 
+# Function to preform log of two numbers
+def log(number1, number2):
+    return (math.log(number2,number1))
 
 print("Operation Menu -\n"
       "1. Addition of two numbers\n"
       "2. Subtraction of two numbers\n"
       "3. Multiplication of two numbers\n"
       "4. Division of two numbers\n"
-      "5. root any numbers\n")
+      "5. root any numbers\n"
+      "6. log of two numbers\n")
 
 # Taking input from the user
-select = input("Select operations form 1, 2, 3, 4, 5:")
+select = input("Select operations form 1, 2, 3, 4, 5, 6:")
 
 if select == '1':
     num1 = int(input("Enter first number: "))
@@ -71,5 +75,9 @@ elif select == '4':
 elif select == '5':
     num1 = int(input("Enter the number: "))
     print("root", num1, "=", root(num1))
+elif select == '6':
+    num1 = int(input("Enter under number: "))
+    num2 = int(input("Enter upper number: "))
+    print("log", num, ",", num2, "=",log(num1,num2))
 else:
     print("Invalid input!")
